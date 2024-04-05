@@ -1,0 +1,31 @@
+.header {
+    background-color: #ffff;
+    padding: 1.5rem 0rem;
+    margin-bottom: 2.8rem;
+    align-items: center;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr auto; 
+    grid-column-gap: 2rem;
+  }
+  
+  ul {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  nav{
+    display: flex;
+    align-items: center;
+  }
+  
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  

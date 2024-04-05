@@ -1,0 +1,6 @@
+BUTTON TSX
+{/* debe de tener props de color de fondo y de padding  y 
+de links para cuando se presione mande a algo*/}
+
+Router 
+Usar Link
