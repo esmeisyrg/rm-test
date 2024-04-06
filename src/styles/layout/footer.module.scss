@@ -1,3 +1,5 @@
+@use '../mixinsfunc';
+
 footer {
     background-color: #ffff;
     padding: 1.5rem 0rem;
@@ -17,5 +19,17 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    padding: 1.5rem;
 
+  }
+
+  .top-container{
+    border-top-right-radius: 200px; 
+    padding: 2rem;
+    background-color: #1F3564;
+  }
+
+  .list-container{
+    @include mixinsfunc.fuente-color(#ffffff, 700, normal);
+    @include mixinsfunc.display-center(center, center);
   }

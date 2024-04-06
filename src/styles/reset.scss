@@ -58,27 +58,16 @@ time, mark, audio, video {
     color: inherit;
   }
   
-  /* Evitamos problemas con los pseudoelementos de quotes */
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: "";
-    content: none;
-  }
-  
+
 
   /* Nivelamos problemas de tipografías y colocación de formularios */
   form, input, textarea, select, button, label {
     font-family: inherit;
     font-size: inherit;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
     background-color: transparent;
     color: inherit;
     display: block;
-    /* opcional */
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+
   }
   
   /* Reseteamos las tablas */
@@ -88,12 +77,7 @@ time, mark, audio, video {
   }
   
 
-  
-  /* (Probándolo, no usar en producción) En el caso de añadir una  */
-  /* p svg{
-    display: inline;
-    width: initial;
-  } */
+ 
   /* Configuramos la tipografía para toda la web */
   body {
     min-height: 100vh;
@@ -102,16 +86,6 @@ time, mark, audio, video {
     background-color: #F3F3F5;
     color: #1F3564;
     font-weight: 500;
-    /* opcional */
     line-height: 1.4em;
-    /* opcional */
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-    /* opcional */
-    font-smooth: always;
-    /* opcional */
-    -webkit-font-smoothing: antialiased;
-    /* opcional */
-    -moz-osx-font-smoothing: grayscale;
+
   }

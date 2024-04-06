@@ -1,0 +1,6 @@
+@use '../../mixinsfunc';
+
+.text{
+    @include mixinsfunc.fuente-color(#ffffff, 400, normal);
+}
+

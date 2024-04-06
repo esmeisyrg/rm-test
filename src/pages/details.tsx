@@ -1,6 +1,17 @@
+import Footer from "../components/layout/footer"
+import Header from "../components/layout/header"
+
+
 
 export default function Details() {
   return (
-    <div>details</div>
+    <>
+
+      <Header/>
+      <Footer/>
+
+
+
+    </>
   )
 }

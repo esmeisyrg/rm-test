@@ -29,3 +29,14 @@
     align-items: center;
   }
   
+  .line{
+      width: 1px; /* Ancho de la línea */
+      height: 20px; /* Altura de la línea */
+      background-color: #928E8B; /* Color de la línea */
+  }
+  
+  .lan{
+    display: flex;
+    gap: 0.8rem;
+    font-weight: 700;
+  }

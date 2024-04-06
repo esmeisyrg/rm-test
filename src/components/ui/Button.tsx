@@ -6,10 +6,11 @@ interface ButtonProps {
   backgroundColor?: string;
   hoverColor?: string;
   destination?: string;
+  fontColor?: string;
   onClick?: () => void; 
 }
 
-const Button: React.FC<ButtonProps> = ({ text, backgroundColor, hoverColor, destination, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ text, backgroundColor, hoverColor, destination, fontColor, onClick }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   const handleMouseEnter = () => {
@@ -32,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({ text, backgroundColor, hoverColor, dest
   return (
     <button
       className={styles.button}
-      style={{ backgroundColor: isHovered ? hoverColor : backgroundColor }}
+      style={{ backgroundColor: isHovered ? hoverColor : backgroundColor, color: fontColor} }
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}

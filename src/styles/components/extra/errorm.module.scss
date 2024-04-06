@@ -1,0 +1,32 @@
+@use '../../mixinsfunc';
+
+.error-container{
+    background-color: #ffff;
+    padding: 10rem;
+    @include mixinsfunc.display-center(center, center);
+
+}
+
+.square{
+    @include mixinsfunc.display-center(center, center);
+    flex-wrap: wrap;
+        width: 90%; // Ajusta el ancho según tus necesidades
+        height: 15rem; // Ajusta la altura según tus necesidades
+        background-color: #ffffff; // Cambia el color de fondo si es necesario
+        border: 1px solid #808080; // Color gris y grosor del borde
+        border-radius: 10px; // Radio del borde, ajusta según prefieras
+        padding: 2rem;
+        gap: 1rem;
+}
+
+.title{
+    @include mixinsfunc.fuente-color(#1F3564, 700, normal);
+    font-size: 2rem;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
