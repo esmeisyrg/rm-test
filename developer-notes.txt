@@ -6,3 +6,15 @@ Router
 Usar Link
 
 https://rm-trial.surge.sh/
+
+
+--
+interface PropertyProps {
+  id: number;
+  parent_id?: number;
+  slug?: number;
+  price?: string;
+}
+
+
+Quitar las pruebas inmobiliarias

@@ -3,8 +3,11 @@
 }
 
 .container-properties{
-    background-color: #ffff;
+    background-color: white;
     padding: 3rem 8rem;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
 }

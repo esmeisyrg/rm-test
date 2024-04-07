@@ -3,6 +3,7 @@ import Logo from '../../assets/Icon.svg'
 import SearchLabel from '../ui/Search-label'
 import US from '../../assets/usa.svg'
 import ES from '../../assets/rd.svg'
+import { Link } from 'react-router-dom'
 
 
 export default function Header() {
@@ -11,9 +12,11 @@ export default function Header() {
 
       {/* create a header  structure */}
       <div className={styles.container}> 
+       <Link to="/">
         <div className={styles.logo}>
           <img src={Logo} alt="logo" />
         </div>
+        </Link>
 
         <SearchLabel/>
         <nav>
