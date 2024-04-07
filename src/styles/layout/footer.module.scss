@@ -10,6 +10,22 @@ footer {
     color: #8C8C8C;
     font-size: 0.8rem;
   }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-gap: 1px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .column1 {
+    grid-column: 1; 
+  }
+  
+  .column2 {
+    grid-column: 2; 
+  }
   
   .container {
     width: 90%;
@@ -24,8 +40,11 @@ footer {
   }
 
   .top-container{
+    @include mixinsfunc.display-center(center, center);
+
+
     border-top-right-radius: 200px; 
-    padding: 2rem;
+    padding: 5rem 0rem;
     background-color: #1F3564;
   }
 
@@ -33,3 +52,73 @@ footer {
     @include mixinsfunc.fuente-color(#ffffff, 700, normal);
     @include mixinsfunc.display-center(center, center);
   }
+
+  .sm{
+    @include mixinsfunc.display-center(flex-start, start);
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+
+  }
+
+  .list-ul{
+    background-color: #1F3564;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+
+  }
+
+  .inner-container{
+    @include mixinsfunc.display-center( flex-start, center);
+    width: 90%;
+    margin: 0 auto;
+    gap: 10rem;
+
+  }
+
+.searchInputG{
+  border: 1px solid #FFFFFF;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  width: auto;
+  height: 2rem;
+
+  &::placeholder{
+    color: #ffff;
+  }
+}
+
+.pp1{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.p1{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  max-width: 35rem;
+}
+
+.p2{
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.join-buttons{
+  display: flex;
+  gap: 1rem;
+}
+
+.left{
+  width: 50%;
+}
+
+.right{
+  width: 50%;
+}
+
+
+.mail-suscribe{
+  display: flex;
+  gap: 1rem;
+}

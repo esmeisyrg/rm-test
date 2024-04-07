@@ -6,11 +6,14 @@ interface TextsProps {
   fontWeight?: 'normal' | 'bold' | 'lighter' | 'bolder' | 'initial' | 'inherit';
   fontStyle?: 'normal' | 'italic' | 'oblique' | 'initial' | 'inherit';
   fontSize?: string;
+  className?: string;
 }
 
-export default function Texts({ color, text, fontWeight, fontStyle, fontSize }: TextsProps) {
+export default function Texts({ color, text, fontWeight, fontStyle, fontSize, className }: TextsProps) {
+  const combinedClassName = className ? `${styles.text} ${className}` : styles.text;
+
   return (
-    <p className={styles.text} style={{ color, fontWeight, fontStyle, fontSize }}>
+    <p className={combinedClassName} style={{ color, fontWeight, fontStyle, fontSize }}>
       {text}
     </p>
   );

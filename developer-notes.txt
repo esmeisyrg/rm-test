@@ -18,3 +18,6 @@ interface PropertyProps {
 
 
 Quitar las pruebas inmobiliarias
+
+--
+Alinear los codigos de las cards de propiedades
