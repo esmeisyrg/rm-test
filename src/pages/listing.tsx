@@ -2,7 +2,7 @@ import Header from '../components/layout/header'
 import styles from '../styles/pages/listing.module.scss'
 import Footer from '../components/layout/footer'
 import PropertyCard from '../components/property-card'
-
+import Pagination from '../components/extra/pagination'
 
 export default function Listing() {
   return (
@@ -11,7 +11,15 @@ export default function Listing() {
 
         <section className={styles['container-properties']}>
           <PropertyCard/>
+
+        
+
         </section>
+
+        <article className={styles.pagination}>
+            <Pagination />
+
+        </article>
 
   
 

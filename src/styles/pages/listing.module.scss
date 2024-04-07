@@ -1,8 +1,8 @@
-.container{
+@use '../mixinsfunc';
 
-}
 
 .container-properties{
+    @include mixinsfunc.display-center(center, center);
     background-color: white;
     padding: 3rem 8rem;
     display: flex;
@@ -10,4 +10,10 @@
     align-items: flex-start;
     justify-content: center;
     gap: 4rem;
+}
+
+.pagination{
+    @include mixinsfunc.display-center(center, center);
+    background-color: white;
+
 }
