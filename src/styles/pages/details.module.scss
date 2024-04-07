@@ -1,0 +1,5 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas con igual ancho */
+    gap: 20px; /* Espacio entre las columnas */
+  }
