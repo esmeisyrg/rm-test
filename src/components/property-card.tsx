@@ -59,13 +59,17 @@ const PropertyCard: React.FC = () => {
               </Link>
 
               <div className={styles['card-content']}>
-                <h3>{item.realstate_type}</h3>
-                <p>{item.city}</p>
+          
+                <h3 className={styles['property-title']}>{item.realstate_type}</h3>
+                <p className={styles.city}>{item.city}</p>
+                <p className={styles['city-sector']}>{item.city}, {item.sector}</p>
+                
+                <article className={styles['venta-container']}>
+                  <p className={styles.venta}>VENTA</p>
+                  <p className={styles.price}>$US {item.price}</p>
 
-                <p>{item.city}, {item.sector}</p>
-
-                <p>Venta</p>
-                <p>$US {item.price}</p>
+                </article>
+                
 
                 <article className={styles.icons}>
                   <img src={IParking} alt="Parking Icon" />
@@ -78,9 +82,12 @@ const PropertyCard: React.FC = () => {
                   <span>{item.sqm_land}</span> 
                 </article>
                 <p className={styles.code}>Cod.{item.id}</p>
+
               </div>
             </div>
+
           </article>
+
     </div>
     ))}
     </>
