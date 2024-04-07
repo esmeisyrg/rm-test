@@ -47,6 +47,7 @@ interface InfoProps{
   }
 }
 
+
 const PropertyCard: React.FC = () => {
   const [data, setData] = useState<InfoProps[] | null>(null);
 

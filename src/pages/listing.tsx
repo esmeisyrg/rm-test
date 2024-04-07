@@ -13,8 +13,7 @@ export default function Listing() {
           <PropertyCard/>
         </section>
 
-    
-
+  
 
 
       <Footer />

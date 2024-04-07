@@ -9,7 +9,7 @@
     border: 1px solid #ccc;
     padding: 0.4rem 0.8rem;
     background-color: #F7F6F4;
-    outline: none; /* Quita el borde al hacer clic */
+    outline: none;
 
   }
   
@@ -20,6 +20,11 @@
 
     padding: 0.5rem 0.8rem;
     cursor: pointer;
+  }
+
+  .form{
+    display: flex;
+    gap: 1rem;
   }
   
   .icon{
