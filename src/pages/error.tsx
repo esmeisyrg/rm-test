@@ -7,7 +7,7 @@ export default function Error() {
   return (
     <div className={styles['error-container']}>
     
-      <Header/>
+      <Header showSearchLabel={true} showSelect ={true} />
 
       <ErrorMessage/>
 

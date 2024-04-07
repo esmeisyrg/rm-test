@@ -5,20 +5,27 @@ import US from '../../assets/usa.svg'
 import ES from '../../assets/rd.svg'
 import { Link } from 'react-router-dom'
 
+import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
+import { MdOutlineCheckBox } from "react-icons/md";
 
-export default function Header() {
+
+interface HeaderProps {
+  showSearchLabel: boolean
+  showSelect: boolean
+}
+
+const Header: React.FC<HeaderProps> = ({ showSearchLabel, showSelect = true }) => {
   return (
     <header className={styles.header}>
-
-      {/* create a header  structure */}
-      <div className={styles.container}> 
-       <Link to="/">
-        <div className={styles.logo}>
-          <img src={Logo} alt="logo" />
-        </div>
+      <div  className={`${styles.container} ${showSearchLabel ? styles.withSearchLabel : styles.withoutSearchLabel}`}>
+        <Link to="/">
+          <div className={styles.logo}>
+            <img src={Logo} alt="logo" />
+          </div>
         </Link>
 
-        <SearchLabel/>
+
+        {showSearchLabel && <SearchLabel />}
         <nav>
           <ul>
             <li>
@@ -47,6 +54,22 @@ export default function Header() {
           </ul>
         </nav>
       </div>
+
+      
+      {showSelect && (
+        <article className={styles['select-container']}>
+          <div className={styles.buy}>
+            <MdOutlineCheckBoxOutlineBlank />
+            COMPRAR
+          </div>
+          <div className={styles.alquilar}>
+            <MdOutlineCheckBox />
+            ALQUILAR
+          </div>
+        </article>
+      )}
     </header>
   )
 }
+
+export default Header;

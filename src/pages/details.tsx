@@ -30,7 +30,7 @@ const Details: React.FC = () => {
     <>
 
 
-      <Header/>
+    <Header showSearchLabel={false} showSelect ={false} />
 
       <h1>{realEstateDetails.bedrooms}</h1>
 

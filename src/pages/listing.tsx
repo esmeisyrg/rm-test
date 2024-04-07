@@ -7,7 +7,7 @@ import Pagination from '../components/extra/pagination'
 export default function Listing() {
   return (
     <div className={styles.container}>
-      <Header />
+      <Header showSearchLabel={true} showSelect ={true} />
 
         <section className={styles['container-properties']}>
           <PropertyCard/>

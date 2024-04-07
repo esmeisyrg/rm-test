@@ -1,17 +1,72 @@
+@use '../mixinsfunc';
+
+
+.select-container{
+  position: absolute;
+  left: 12%;
+  bottom: -38%;
+  display: flex;
+}
+
 .header {
-    background-color: #ffff;
-    padding: 1.5rem 0rem;
-    margin-bottom: 2.8rem;
-    align-items: center;
+  position: relative;
+  background-color: #ffff;
+  padding: 1.5rem 0rem;
+  margin-bottom: 2.8rem;
+  align-items: center;
+
+  }
+  .buy{
+    width: 8rem;
+    height: 2rem;
+    background-color: #E92027;
+    color: #ffff;
+    text-align: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    @include mixinsfunc.display-center(center, center);
+    cursor: pointer;
+
+  }
+
+  .alquilar{
+    font-size: 0.8rem;
+    gap: 0.4rem;
+    width: 8rem;
+    height: 2rem;
+    background-color: #1F3564;
+    color: #ffff;
+    text-align: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    @include mixinsfunc.display-center(center, center);
+    cursor: pointer;
+
   }
   
-  .container {
+  .withoutSearchLabel {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+
+  }
+
+  .withSearchLabel{
     width: 90%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 0.1fr 1fr auto; 
     grid-column-gap: 2rem;
     align-items: center;
+
+  }
+
+  .container {
+ 
   }
   
   ul {
