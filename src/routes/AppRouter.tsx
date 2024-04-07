@@ -8,7 +8,7 @@ export default function AppRouter() {
       <Routes> 
         <Route path="/" element={<Listing/>} />
         <Route path="/error" element={<Error />} />
-        <Route path="/details" element={<Details/>}/>
+        <Route path="/details/:id" element={<Details/>}/>
         <Route path="/*" element={<Error/>}/>
       </Routes>
 

@@ -8,44 +8,8 @@ import { getRealEstates } from '../hooks/apiRequest';
 import Heart from '../assets/icons/saved.svg';
 import HeartActive from '../assets/icons/savedActive.svg';
 import { Link } from 'react-router-dom';
+import { InfoProps } from '../utils/infoProps';
 
-interface InfoProps{
-  id: number;
-  price: number;
-  business_type?: string;
-  arrangement?: string;
-  realstatetype_id?: number;
-  realstate_type?: string;
-  sqm_land?: number;
-  parking_spots?: number;
-  bedrooms?: number;
-  bathrooms?: number;
-  city?: string;
-  sector?: string;
-  latitude?: number;
-  longitude?: number;
-  status?: string;
-  condition_status?: string;
-  improvements: {
-    realstate_id?: number;
-    name?: string;
-  }
-  main_picture: {
-    big?: string;
-    small?: string;
-  }
-  project: {
-    separation_price?: string;
-  }
-  minimum_price?: string;
-  maximum_price?: string;
-
-  info: {
-    realstate_id?: number;
-    language_id?: number;
-    title?: string;
-  }
-}
 
 
 const PropertyCard: React.FC = () => {
@@ -90,7 +54,7 @@ const PropertyCard: React.FC = () => {
                   onClick={() => toggleFavorite(item.id)}
                 />
 
-              <Link to="/details">
+              <Link to={`/details/${item.id}`}>
                   <img className={styles.image} src={item.main_picture.small} alt="House" />
               </Link>
 
