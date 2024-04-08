@@ -18,8 +18,8 @@ function Trial() {
         async function fetchData() {
             try {
                 const apiResponse = await getRealEstates();
-                console.log(apiResponse); // Verifica la estructura de apiResponse
-                const apiData = apiResponse.data; // Accede a la propiedad "data"
+                console.log(apiResponse); 
+                const apiData = apiResponse.data; 
                 setData(apiData);
             } catch (error) {
                 console.error('Error fetching real estates', error);

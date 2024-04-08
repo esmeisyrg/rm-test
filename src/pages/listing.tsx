@@ -12,28 +12,14 @@ export default function Listing() {
 
         <section className={styles['container-properties']}>
           <PropertyCard/>
-
-        
-
         </section>
 
         <article className={styles.pagination}>
             <Pagination />
-
         </article>
-
-  
 
 
         <Footer showWhiteBackground={true} />
-
-
-
-
-
-
-
-
     </div>
   )
 }

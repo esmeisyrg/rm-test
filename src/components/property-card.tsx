@@ -15,7 +15,7 @@ import RemaxGlobe from '../assets/img/remaxglobe.svg'
 const PropertyCard: React.FC = () => {
   const [data, setData] = useState<InfoProps[] | null>(null);
   const [favorites, setFavorites] = useState<number[]>([]);
-  const [loading, setLoading] = useState(true); // Estado para controlar la carga de datos
+  const [loading, setLoading] = useState(true); 
 
   const toggleFavorite = (id: number) => {
     if (favorites.includes(id)) {
@@ -30,7 +30,7 @@ const PropertyCard: React.FC = () => {
       try {
         const apiResponse = await getRealEstates();
         setData(apiResponse.data);
-        setLoading(false); // Indica que los datos se han cargado después de recibir la respuesta
+        setLoading(false); 
       } catch (error) {
         console.error('Error fetching real estates', error);
       }

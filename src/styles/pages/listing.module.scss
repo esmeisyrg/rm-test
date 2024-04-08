@@ -1,6 +1,5 @@
 @use '../mixinsfunc';
 
-
 .container-properties{
     @include mixinsfunc.display-center(center, center);
     background-color: white;
@@ -18,12 +17,3 @@
 
 }
 
-
-.rm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-  }

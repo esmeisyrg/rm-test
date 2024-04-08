@@ -24,7 +24,7 @@ const Details: React.FC = () => {
   useEffect(() => {
     async function fetchDetails() {
       try {
-        const apiResponse = await getRealEstatesById(Number(id)); // Convertimos el id a número y lo pasamos a la función de la API
+        const apiResponse = await getRealEstatesById(Number(id)); 
         setInfo(apiResponse.data);
       } catch (error) {
         console.error('Error fetching real estate details', error);
@@ -155,7 +155,6 @@ const Details: React.FC = () => {
           </article>
         
 
-          
           <article className={styles.right}>
             <h5 className={styles['mini-title']}>MEJORAS</h5>
               <ul className={styles.list}>        
@@ -167,9 +166,6 @@ const Details: React.FC = () => {
                 <li className={styles['mini-text__list']}>Planta Eléctrica FULL</li>
                 <li className={styles['mini-text__list']}>Portón Eléctrico</li>
               </ul>
-      
-
-
 
             <h5  className={styles['mini-title']} >PUERTAS</h5>
             <p className={styles['mini-text']}>Roble</p>

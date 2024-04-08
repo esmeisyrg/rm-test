@@ -5,21 +5,17 @@ $breakpoints: (
   xlarge: 1200px
 );
 
-// Mixin para un solo breakpoint
 @mixin respond-to($breakpoint) {
   @media (max-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }
 }
 
-// Mixin para dos breakpoints
 @mixin respond-to-double($breakpoint1, $breakpoint2) {
   @media (max-width: map-get($breakpoints, $breakpoint1)), (max-width: map-get($breakpoints, $breakpoint2)) {
     @content;
   }
 }
-
-
 
 
 @mixin fuente-color($color, $weight, $style) {

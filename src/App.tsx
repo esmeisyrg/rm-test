@@ -3,6 +3,7 @@ import { getRealEstates, getRealEstatesById} from './hooks/apiRequest.tsx'
 
 function App() {
 
+  {/* Prueba de conexión*/}
   getRealEstates()
   .then(data => {
     console.log('Propiedades inmobiliarias:', data);

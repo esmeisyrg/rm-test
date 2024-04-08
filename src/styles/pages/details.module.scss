@@ -297,7 +297,6 @@
     padding: 0.5rem 3rem;
     background-color: #1F3564;
     color: white;
-    z-index: 999;
     border-top-left-radius: 1rem; ;
     border-top-right-radius: 1rem; ;
 
@@ -306,8 +305,6 @@
       top: -13.5%;
       font-size: 0.8rem;
     }
-
-
 
 
     &__2{
@@ -319,7 +316,6 @@
       gap: 1rem;
       padding:0.5rem 4rem;
       background-color: white;
-      z-index: 999;
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
 
@@ -329,13 +325,6 @@
         font-size: 0.8rem;
 
       }
-
-
-
-      
-
-      
-
     }
 
     &__3{
@@ -344,7 +333,6 @@
       right: -0%;
       padding:0.8rem 3rem;
       background-color: white;
-      z-index: 999;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
 
@@ -357,7 +345,6 @@
 
       span{
         display: block;
-
       }
 
       .label{
@@ -367,7 +354,6 @@
         @include mixinsfunc.respond-to(medium) {
           font-size: 1rem;
         }
-
 
       }
 
@@ -379,11 +365,7 @@
           font-size: 1.3rem;
         }
 
-        
-
       }
-
-      
 
     }
 
@@ -396,4 +378,5 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
+  gap: 0.6rem;
 }

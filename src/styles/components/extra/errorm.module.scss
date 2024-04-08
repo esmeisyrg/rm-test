@@ -7,8 +7,6 @@
 
     @include mixinsfunc.respond-to-double(medium, large) {
         padding: 8rem 4rem;
-
-
     }
 
 }
@@ -27,7 +25,6 @@
         @include mixinsfunc.respond-to-double(medium, large) {
             width: auto; 
             height: auto; 
-
         }
 
 }

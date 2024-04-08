@@ -68,7 +68,6 @@
     
 }
 
-
 .code{
     @include mixinsfunc.fuente-color(#E92027, 700, normal);
     text-align: center;
@@ -113,5 +112,6 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    gap: 0.2rem;
     
   }

@@ -78,7 +78,7 @@ export interface InfoProps {
     minimum_price: string;
     maximum_price: string;
   };
-  agency?: unknown; // Usando unknown en lugar de any
+  agency?: unknown; 
   info: {
     realstate_id: number;
     language_id: number;
