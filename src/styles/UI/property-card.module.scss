@@ -1,0 +1,117 @@
+@use '../mixinsfunc';
+
+.card-container{
+    @include mixinsfunc.display-center(center, center);
+    flex-wrap: wrap;
+}
+
+.venta-container{
+    margin-top: 1rem
+}
+
+.property-title{
+    @include mixinsfunc.fuente-color(#1F3564, 500, normal);
+    font-size: 1.1rem;
+    white-space: normal;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.city{
+    @include mixinsfunc.fuente-color(#1F3564, 300, italic);
+    font-size: 1rem;
+    white-space: normal;
+    display: inline-block;
+}
+
+.city-sector{
+    @include mixinsfunc.fuente-color(#8C8C8C, 500, normal);
+    font-size: 0.7rem;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.venta{
+    @include mixinsfunc.fuente-color(#1F3564, 300, normal);
+    font-size: 1rem;
+
+}
+
+.price{
+    @include mixinsfunc.fuente-color(#1F3564, 500, normal);
+    font-size: 1.2rem;
+}
+
+
+.heart{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    cursor: url('../../assets/icons/heartpointer.svg'), auto;
+}
+
+.card{
+    position: relative;
+    width: 310px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+  
+    cursor: pointer;
+
+    .image{
+        width: 100%;
+    }
+}
+
+.card-content{
+    padding: 1rem 0rem
+    
+}
+
+.code{
+    @include mixinsfunc.fuente-color(#E92027, 700, normal);
+    text-align: center;
+    margin-top: 1rem;
+
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container{
+    width: 20rem;
+    height: 15.5rem;
+    overflow: hidden;
+    display: flex;
+    border-radius: .2rem;
+    transition: transform .5s ease-in-out;
+}
+
+.icons{
+    display: grid;
+    grid-template-columns: repeat(8, 0.3fr);
+    margin-top: 1rem;
+    justify-items: center;
+    align-items: center;
+    
+    
+    .span{
+        color:#8C8C8C;
+
+    }
+}
+
+
+.rm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    gap: 0.2rem;
+    
+  }

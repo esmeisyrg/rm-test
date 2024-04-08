@@ -1,0 +1,59 @@
+@use "../mixinsfunc";
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    @include mixinsfunc.respond-to(medium) {
+			display: none;
+		}
+  }
+  
+  .searchInput {
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.8rem;
+    background-color: #F7F6F4;
+    outline: none;
+    display: inline-block;
+    position: relative;
+
+  }
+  
+  .searchButton {
+    border-radius: 0rem 1rem  0.2rem  0rem;
+    background-color: #273A63;
+    color: #fff;
+
+    padding: 0.37rem 0.8rem;
+    cursor: pointer;
+  }
+
+
+  
+  .icon{
+    font-size: 1rem;
+    display: flex;
+  }
+  
+
+  input[type="text"] {
+    width: 12rem;
+    height: 2rem;
+
+    border-radius: 1rem 0 0 1rem;
+
+  }
+
+  input[type="submit"] {
+    position: relative;
+    border-radius: 0 1rem 1rem 0;
+    width: 5rem;
+    height: 2rem;
+  }
+
+  .form{
+    display: flex;
+    align-items: center;
+  }

@@ -1,0 +1,33 @@
+$breakpoints: (
+  small: 576px,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1200px
+);
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin respond-to-double($breakpoint1, $breakpoint2) {
+  @media (max-width: map-get($breakpoints, $breakpoint1)), (max-width: map-get($breakpoints, $breakpoint2)) {
+    @content;
+  }
+}
+
+
+@mixin fuente-color($color, $weight, $style) {
+    font-weight: $weight;
+    color: $color;
+    font-style: $style;
+  }
+
+@mixin display-center($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+

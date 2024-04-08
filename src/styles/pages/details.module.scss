@@ -1,0 +1,382 @@
+@use '../mixinsfunc';
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+  }
+
+  /* Fonts */
+
+  .direccion{
+    @include mixinsfunc.fuente-color(#8C8C8C, 500, normal);
+
+    &__1{
+      @include mixinsfunc.fuente-color(#8C8C8C, 500, normal);
+      font-size: 1.1rem;
+      margin-bottom: 1rem
+    }
+
+    &__2{
+      @include mixinsfunc.fuente-color(#8C8C8C, 700, normal);
+
+      font-size: 1rem;
+    }
+  }
+
+  .mini-title{
+    &__top{
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1F3564;
+      margin-bottom: 0.8rem;
+
+      @include mixinsfunc.respond-to(medium) {
+        font-size: 1.5rem;
+
+      }
+  
+
+    }
+    
+    &__active{
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1F3564;
+
+      
+
+    }
+
+    &__active2{
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1F3564;
+      margin-bottom: 1rem;
+
+    }
+
+    @include mixinsfunc.fuente-color(#1F3564, 700, normal);
+    
+  }
+
+  .mini-text{
+    @include mixinsfunc.fuente-color(#989898, 500, normal);
+    margin-bottom: 1rem;
+
+    &__list{
+      @include mixinsfunc.fuente-color(#989898, 500, normal);
+      margin-bottom: 0.2rem;
+
+    }
+  }
+
+  .icons{
+    display: flex;
+    gap: 1rem;
+
+    span{
+      color:#8C8C8C;
+    }
+  }
+
+  .details{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 7rem 0rem;
+  }
+
+  .details-container{
+    width: 70%;
+    margin: auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+
+    @include mixinsfunc.respond-to-double(medium, large) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      width: 80%;
+      align-items: center;
+
+    }
+  }
+
+  .line{
+    width: auto;
+    height: 1px;
+    background-color: #CBCBCB;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+
+    &__2{
+      width: 100%;
+      background-color: #CBCBCB;
+      height: 1px;
+    }
+  }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+
+  }
+  
+  .left {
+    grid-column: 1; 
+  }
+  
+  .right {
+    grid-column: 2; 
+  }
+
+  .left-side{
+    width: 40%;
+    @include mixinsfunc.respond-to-double(medium, large) {
+      width: 100%;
+
+    }
+    
+  }
+
+  .right-side{
+    width: 40%;
+
+    @include mixinsfunc.respond-to-double(medium, large) {
+      width: 100%;
+
+    }
+  }
+
+  .agent{
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    object-position: top; 
+
+
+  }
+
+  .agent-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .interest{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.1rem;
+  }
+
+  .txI{
+    padding: 0.8rem;
+    text-align: center;
+  }
+
+  .agent-reference{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    &__2{
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+
+    }
+
+  }
+
+  .bt{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /*IMAGES */
+
+  .grid-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+
+  .gridd{
+    max-width: 700px;
+
+  }
+
+  .gridd{
+    width: 70%;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+
+    @include mixinsfunc.respond-to-double(medium, large) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      width: 80%;
+      align-items: center;
+
+    }
+
+  }
+
+  .images-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 10px; 
+    background: white;
+    padding-right: 1rem;
+    position: relative;
+  }
+  
+  .large-image img,
+  .small-image img {
+    object-fit: cover; 
+    max-width: 100%; 
+    height: 100%;
+    width: 100%; 
+  }
+  
+  .large-image {
+    grid-column: 1 / 2; 
+  }
+  
+  .small-images-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px; 
+  }
+
+  .grid-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .gri{
+    display: flex;
+  }
+
+  .card{
+    position: absolute;
+    top: -8%;
+    left: -0%;
+    padding: 0.5rem 3rem;
+    background-color: #1F3564;
+    color: white;
+    border-top-left-radius: 1rem; ;
+    border-top-right-radius: 1rem; ;
+
+    @include mixinsfunc.respond-to(medium) {
+      padding:0.3rem 1.2rem;
+      top: -13.5%;
+      font-size: 0.8rem;
+    }
+
+
+    &__2{
+      position: absolute;
+      align-items: center;
+      display: flex;
+      top: -8%;
+      right: 0%;
+      gap: 1rem;
+      padding:0.5rem 4rem;
+      background-color: white;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+
+      @include mixinsfunc.respond-to(medium) {
+        padding:0.3rem 1.2rem;
+        top: -13.5%;
+        font-size: 0.8rem;
+
+      }
+    }
+
+    &__3{
+      position: absolute;
+      bottom: -13.5%;
+      right: -0%;
+      padding:0.8rem 3rem;
+      background-color: white;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+
+      @include mixinsfunc.respond-to(medium) {
+        padding:0.4rem 2rem;
+        bottom: -23%;
+      }
+
+      
+
+      span{
+        display: block;
+      }
+
+      .label{
+        @include mixinsfunc.fuente-color(#1F3564, 300, normal);
+        font-size: 1.2rem;
+
+        @include mixinsfunc.respond-to(medium) {
+          font-size: 1rem;
+        }
+
+      }
+
+      .price{
+        @include mixinsfunc.fuente-color(#1F3564, 500, normal);
+        font-size: 1.6rem;
+
+        @include mixinsfunc.respond-to(medium) {
+          font-size: 1.3rem;
+        }
+
+      }
+
+    }
+
+  }
+
+.rm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  gap: 0.6rem;
+}
