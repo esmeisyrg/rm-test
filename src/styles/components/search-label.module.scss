@@ -1,7 +1,13 @@
+@use "../mixinsfunc";
+
 .searchContainer {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
+    @include mixinsfunc.respond-to(medium) {
+			display: none;
+		}
   }
   
   .searchInput {
@@ -31,3 +37,4 @@
     font-size: 1rem;
     display: flex;
   }
+  

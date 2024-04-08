@@ -1,5 +1,6 @@
 @use '../mixinsfunc';
 
+
 footer {
     background-color: #ffff;
     padding: 1.5rem 0rem;
@@ -17,6 +18,14 @@ footer {
     grid-gap: 1px;
     justify-items: center;
     align-items: center;
+
+    @include mixinsfunc.respond-to-double(medium, large) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
   }
   
   .column1 {
@@ -46,11 +55,27 @@ footer {
     border-top-right-radius: 200px; 
     padding: 5rem 0rem;
     background-color: #1F3564;
+
+    @include mixinsfunc.respond-to-double(medium, large) {
+      border-top-right-radius: 0px; 
+      padding: 2rem 0rem;
+
+    }
+
+
   }
 
   .list-container{
     @include mixinsfunc.fuente-color(#ffffff, 700, normal);
     @include mixinsfunc.display-center(center, center);
+    flex-wrap: wrap;
+
+    @include mixinsfunc.respond-to-double(medium, large) {
+      font-size: 0.8rem;
+      padding: 0rem 2rem;
+
+    }
+
   }
 
   .sm{
@@ -59,6 +84,15 @@ footer {
     flex-wrap: wrap;
     margin-top: 1.5rem;
 
+
+    @include mixinsfunc.respond-to-double(medium, large) {
+     
+      @include mixinsfunc.display-center(center, center);
+
+    }
+
+
+
   }
 
   .list-ul{
@@ -66,15 +100,29 @@ footer {
     padding-top: 4rem;
     padding-bottom: 2rem;
 
+    @include mixinsfunc.respond-to-double(medium, large) {
+      padding-top: 2rem;
+    }
+
   }
 
-  .inner-container{
-    @include mixinsfunc.display-center( flex-start, center);
+  .inner-container {
+    @include mixinsfunc.display-center(flex-start, center);
     width: 90%;
     margin: 0 auto;
     gap: 10rem;
 
+    
+    @include mixinsfunc.respond-to-double(medium, large) {
+      flex-direction: column;
+      gap: 2rem;
+
+    }
+  
+  
+  
   }
+
 
 .searchInputG{
   border: 1px solid #FFFFFF;
@@ -91,34 +139,97 @@ footer {
 .pp1{
   margin-top: 2rem;
   margin-bottom: 1rem;
+
+  @include mixinsfunc.respond-to-double(medium, large) {
+    font-size: 0.8rem;
+    text-align: center;
+ 
+   }
+ 
 }
 
 .p1{
   margin-top: 2rem;
   margin-bottom: 1rem;
   max-width: 35rem;
+
+
+  @include mixinsfunc.respond-to-double(medium, large) {
+    text-align: center;
+    font-size: 0.8rem;
+
+   }
 }
 
 .p2{
   margin-top: 3.5rem;
   margin-bottom: 1.2rem;
+
+  @include mixinsfunc.respond-to-double(medium, large) {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+
+ 
+   }
 }
 
 .join-buttons{
   display: flex;
   gap: 1rem;
+
+  @include mixinsfunc.respond-to-double(medium, large) {
+    justify-content: center;
+  }
+
 }
 
 .left{
   width: 50%;
+
+  @include mixinsfunc.respond-to-double(medium, large) {
+    width: 100%;
+  }
+
 }
 
 .right{
   width: 50%;
+
+  @include mixinsfunc.respond-to-double(medium, large) {
+    width: 100%;
+
+    @include mixinsfunc.display-center(center, center);
+    flex-direction: column;
+
+  }
+  
 }
 
+.text{
+  text-align: center;
+
+  
+  @include mixinsfunc.respond-to-double(medium, large) {
+    font-size: 0.8rem;
+  }
+ 
+}
 
 .mail-suscribe{
   display: flex;
   gap: 1rem;
+
+    
+  @include mixinsfunc.respond-to-double(medium, large) {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    
+
+  }
+
+
+
 }
