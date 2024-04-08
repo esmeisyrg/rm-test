@@ -47,9 +47,9 @@ const Header: React.FC<HeaderProps> = ({ showSearchLabel, showSelect = true }) =
           <ul className={styles.menu}>
             <li><a href="/">Comprar</a></li>
             <li><a href="/about">Alquiler</a></li>
-            <li><a href="/contact">Agencia/Agentes</a></li>
-            <li><a href="/contact">Blog</a></li>
-            <li><a href="/contact">Contáctanos</a></li>
+            <li><a href="/error">Agencia/Agentes</a></li>
+            <li><a href="/error">Blog</a></li>
+            <li><a href="/error">Contáctanos</a></li>
 
             <hr className={styles.line}/>
             <li className={styles.lan}>IDIOMA

@@ -8,8 +8,11 @@ import  IGIcon  from '../../assets/media/ig-icon.svg';
 import  TwitterIcon from '../../assets/media/twitter-icon.svg';
 import  WSIcon  from '../../assets/media/whatsapp-icon.svg';
 
+interface FooterProps {
+  showWhiteBackground: boolean;
+}
 
-export default function Footer() {
+const Footer: React.FC<FooterProps> = ({ showWhiteBackground }) => {
   const buttonData = [
     { text: "Abre tu Franquicia", backgroundColor: "#0071BA", hoverColor: "#025f9e", destination: 'https://www.google.com' },
     { text: "Únete a RE/MAX", backgroundColor: "#29A9E0", hoverColor: "#1f80a9", destination: 'https://www.google.com' },
@@ -18,7 +21,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer>
+    <footer className={showWhiteBackground ? styles.whiteBackground : styles.grayBackground}>
       <div className={styles['top-container']}>
           <div className={styles['inner-container']}>
           <article className={styles.left}>
@@ -88,3 +91,4 @@ export default function Footer() {
     </footer>
   );
 }
+export default Footer;

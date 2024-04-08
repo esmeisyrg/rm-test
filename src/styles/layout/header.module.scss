@@ -4,7 +4,7 @@
 .select-container{
   position: absolute;
   left: 12%;
-  bottom: -38%;
+  bottom: -45%;
   display: flex;
   @include mixinsfunc.respond-to-double(medium, large) {
     bottom: -48%;

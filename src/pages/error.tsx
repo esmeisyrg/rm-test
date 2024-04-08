@@ -11,7 +11,7 @@ export default function Error() {
 
       <ErrorMessage/>
 
-      <Footer/>
+      <Footer showWhiteBackground={true} />
 
 
     </div>

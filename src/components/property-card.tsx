@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/UI/property-card.module.scss';
 import IBath from '../assets/icons/Ibath.svg';
 import IRoom from '../assets/icons/IRoom.svg';
@@ -9,10 +9,13 @@ import Heart from '../assets/icons/saved.svg';
 import HeartActive from '../assets/icons/savedActive.svg';
 import { Link } from 'react-router-dom';
 import { InfoProps } from '../utils/infoProps';
+import RemaxGlobe from '../assets/img/remaxglobe.svg'
+
 
 const PropertyCard: React.FC = () => {
   const [data, setData] = useState<InfoProps[] | null>(null);
   const [favorites, setFavorites] = useState<number[]>([]);
+  const [loading, setLoading] = useState(true); // Estado para controlar la carga de datos
 
   const toggleFavorite = (id: number) => {
     if (favorites.includes(id)) {
@@ -27,6 +30,7 @@ const PropertyCard: React.FC = () => {
       try {
         const apiResponse = await getRealEstates();
         setData(apiResponse.data);
+        setLoading(false); // Indica que los datos se han cargado después de recibir la respuesta
       } catch (error) {
         console.error('Error fetching real estates', error);
       }
@@ -34,12 +38,21 @@ const PropertyCard: React.FC = () => {
     fetchData();
   }, []);
 
-  const memoizedData = useMemo(() => data, [data]);
+  if (loading) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.rm}>
+          <img src={RemaxGlobe} alt="Globe" />
+          Cargando...
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
-      {memoizedData &&
-        memoizedData.map((item) => (
+      {data &&
+        data.map((item) => (
           <div key={item.id} className={styles.container}>
             <article className={styles['card-container']}>
               <div className={styles.card}>
@@ -58,7 +71,7 @@ const PropertyCard: React.FC = () => {
                   <p className={styles['city-sector']}>{item.city}, {item.sector}</p>
                   <article className={styles['venta-container']}>
                     <p className={styles.venta}>VENTA</p>
-                    <p className={styles.price}>$US {item.price}</p>
+                    <p className={styles.price}>$US {parseFloat(item.price).toLocaleString('es', { maximumFractionDigits: 2, minimumFractionDigits: 2, useGrouping: true })}</p>
                   </article>
                   <article className={styles.icons}>
                     <img src={IParking} alt="Parking Icon" />

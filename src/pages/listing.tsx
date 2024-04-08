@@ -4,6 +4,7 @@ import Footer from '../components/layout/footer'
 import PropertyCard from '../components/property-card'
 import Pagination from '../components/extra/pagination'
 
+
 export default function Listing() {
   return (
     <div className={styles.container}>
@@ -24,7 +25,12 @@ export default function Listing() {
   
 
 
-      <Footer />
+        <Footer showWhiteBackground={true} />
+
+
+
+
+
 
 
 
